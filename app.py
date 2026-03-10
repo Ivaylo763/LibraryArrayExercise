@@ -35,12 +35,12 @@ if st.button("Търси по автор"):
   found = False
 
 for book in st.session_state.books:
-  if book["author"] == search_title:
+  if book["author"] == search_author:
     st.write(book)
     found = True
 
-if found == False:
-  st.write("Няма намерена такава книга")
+  if found == False:
+    st.write("Няма намерена такава книга")
   
 
 if len(st.session_state.books) == 0:
