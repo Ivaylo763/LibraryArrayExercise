@@ -41,6 +41,7 @@ for book in st.session_state.books:
 
 if found == False:
   st.write("Няма намерена такава книга"):
+  
 
 if len(st.session_state.books) == 0:
   st.write("Няма книги")
