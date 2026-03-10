@@ -19,8 +19,8 @@ if st.button("Добави книгата"):
   st.success("Книгата е добавена!")
 
 if st.button("Покажи всички книги"):
-if len(st.session_state.books) == 0:
-st.write("Няма добавени книги")
+  if len(st.session_state.books) == 0:
+    st.write("Няма добавени книги")
 else:
   for book in st.session_state.books:
     st.write("Заглавие:", book["title"])
