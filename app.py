@@ -19,14 +19,14 @@ if st.button("Добави книгата"):
   st.success("Книгата е добавена!")
 
 if st.button("Покажи всички книги"):
-  if len(se.session_state.books) == 0:
-    st.write("Няма добавени книги")
-  else:
-    for book in st.session_state.books:
-      st.write("Заглавие:", book["title"])
-      st.write("Автор:", book["author"])
-      st.write("Цена:", book["price"])
-      st.write("-----------------------")      
+if len(se.session_state.books) == 0:
+st.write("Няма добавени книги")
+else:
+  for book in st.session_state.books:
+    st.write("Заглавие:", book["title"])
+    st.write("Автор:", book["author"])
+    st.write("Цена:", book["price"])
+    st.write("-----------------------")      
 
 st.header("Търсене по автор")
 search_author = st.text_input("Въведете име на автор")
@@ -35,7 +35,7 @@ if st.button("Търси по автор"):
   found = False
 
 for book in st.session_state.books:
-  if book["title"] == search_title:
+  if book["author"] == search_title:
     st.write(book)
     found = True
 
