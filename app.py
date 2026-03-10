@@ -43,15 +43,3 @@ for book in st.session_state.books:
     st.write("Няма намерена такава книга")
   
 
-if len(st.session_state.books) == 0:
-  st.write("Няма книги")
-
-else:
-  cheapest = st.session_state.books[0]
-
-for book in st.session_state.books:
-  if book["price"] < cheapest["price"]:
-    cheapest = book
-
-st.write("Най евтината книга е")
-st.write(cheapest)
